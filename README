@@ -7,26 +7,26 @@ main()
 {
     int n,c;
     char a[50],ch;
-	do
-	{
-	    printf("\n");
-		printf("Enter the string\n");
-		scanf("%s",a);
-		n=strlen(a);  //length of the string
-		printf("Enter 1 to encrypt or 0 to decrypt\n");
-		scanf("%d",&c);
-		if(c)
-		{ encrypt(a,n);}
-		else{ decrypt(a,n);}
-		printf("\ncontinue?? enter y/n:");
-		ch=getch();
-	}while(ch=='y');
+    do
+    {
+	printf("\n");
+        printf("Enter the string\n");
+	scanf("%s",a);
+	n=strlen(a); //length of the string
+	printf("Enter 1 to encrypt or 0 to decrypt\n");
+	scanf("%d",&c);
+	if(c)
+	{ encrypt(a,n);}
+	else{ decrypt(a,n);}
+	printf("\ncontinue?? enter y/n:");
+	ch=getch();
+    }while(ch=='y');
 }
 void encrypt(char *a,int n)
 {  
     int p,flag=0,t,i,j,k,e,s;
     char b[50][50];
-    for(p=0;p<=n/2;p++) //check if perfect square number
+    for(p=0;p<=n/2;p++)//check if perfect square number
     {
         if((p*p)==n)
         {
